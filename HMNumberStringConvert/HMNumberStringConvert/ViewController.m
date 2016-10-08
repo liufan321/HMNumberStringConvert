@@ -32,6 +32,8 @@
     NSLog(@"%@", [NSString hm_numberStringWithNumber:1 hasDotNumber:NO]);
     NSLog(@"%@", [NSString hm_numberStringWithNumber:0 hasDotNumber:NO]);
     NSLog(@"%@", [NSString hm_numberStringWithNumber:0.31 hasDotNumber:YES]);
+    NSLog(@"%@", [NSString hm_numberStringWithNumber:0.20 hasDotNumber:YES]);
+    NSLog(@"%@", [NSString hm_numberStringWithNumber:1.00 hasDotNumber:YES]);
     
     // --- 测试时间转换 ---
     NSLog(@"%@", [NSString hm_timeStringWithTimeValue:59]);

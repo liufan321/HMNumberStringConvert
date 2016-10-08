@@ -94,7 +94,9 @@ NSString *const HMNumberUnitList = @"| 十 | 百 | 千 | 万 | 十 | 百 | 千 "
     for (NSInteger i = 0; i < dotString.length; i++) {
         NSString *s = [dotString substringWithRange:NSMakeRange(i, 1)];
         
-        [textM appendFormat:@"%@ ", s];
+        if (!(i == dotString.length - 1 && s.integerValue == 0)) {
+            [textM appendFormat:@"%@ ", s];
+        }
     }
     
     return [textM stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
