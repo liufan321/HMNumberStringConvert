@@ -81,8 +81,10 @@ NSString *const HMNumberUnitList = @"| 十 | 百 | 千 | 万 | 十 | 百 | 千 "
     }
     
     // 3. 小数部分转换
+    textM = [NSMutableString stringWithString:[textM stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]]];
+    
     if (!hasDotNumber) {
-        return [textM stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        return textM.copy;
     }
     
     NSString *dotString = [NSString stringWithFormat:@"%.02f", (number - value)];
