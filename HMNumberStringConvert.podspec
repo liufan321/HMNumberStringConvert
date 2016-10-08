@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "HMNumberStringConvert"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "OC的数字转字符串分类方法"
   s.homepage     = "https://github.com/liufan321/HMNumberStringConvert"
   s.license      = "MIT"
