@@ -74,10 +74,27 @@ NSString *const HMNumberUnitList = @"| 十 | 百 | 千 | 万 | 十 | 百 | 千 "
     
     // 替换 `0 万`
     [textM replaceOccurrencesOfString:@"0 万" withString:@"万" options:0 range:NSMakeRange(0, textM.length)];
+    if (textM.length > 5) {
+        [textM replaceOccurrencesOfString:@"1 十 万" withString:@"十 万" options:0 range:NSMakeRange(0, 5)];
+    }
     
     // 处理 `1 十` 情况
     if (valueSting.length == 2) {
         [textM replaceOccurrencesOfString:@"1 十" withString:@"十" options:0 range:NSMakeRange(0, textM.length)];
+    }
+    
+    // 取出末尾三个字符
+    if (textM.length > 3) {
+        [textM replaceOccurrencesOfString:@"十 0" withString:@"十" options:0 range:NSMakeRange(textM.length - 4, 3)];
+    }
+    if (textM.length > 3) {
+        [textM replaceOccurrencesOfString:@"百 0" withString:@"百" options:0 range:NSMakeRange(textM.length - 4, 3)];
+    }
+    if (textM.length > 3) {
+        [textM replaceOccurrencesOfString:@"千 0" withString:@"千" options:0 range:NSMakeRange(textM.length - 4, 3)];
+    }
+    if (textM.length > 3) {
+        [textM replaceOccurrencesOfString:@"万 0" withString:@"万" options:0 range:NSMakeRange(textM.length - 4, 3)];
     }
     
     // 3. 小数部分转换

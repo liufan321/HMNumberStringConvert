@@ -34,6 +34,15 @@
     NSLog(@"%@", [NSString hm_numberStringWithNumber:0.31 hasDotNumber:YES]);
     NSLog(@"%@", [NSString hm_numberStringWithNumber:0.20 hasDotNumber:YES]);
     NSLog(@"%@", [NSString hm_numberStringWithNumber:1.00 hasDotNumber:YES]);
+    NSLog(@"%@", [NSString hm_numberStringWithNumber:10.50 hasDotNumber:YES]);
+    NSLog(@"%@", [NSString hm_numberStringWithNumber:20.50 hasDotNumber:YES]);
+    NSLog(@"%@", [NSString hm_numberStringWithNumber:200 hasDotNumber:false]);
+    NSLog(@"%@", [NSString hm_numberStringWithNumber:201 hasDotNumber:false]);
+    NSLog(@"%@", [NSString hm_numberStringWithNumber:1000 hasDotNumber:false]);
+    NSLog(@"%@", [NSString hm_numberStringWithNumber:10000 hasDotNumber:false]);
+    NSLog(@"%@", [NSString hm_numberStringWithNumber:10001 hasDotNumber:false]);
+    NSLog(@"%@", [NSString hm_numberStringWithNumber:100000 hasDotNumber:false]);
+    NSLog(@"%@", [NSString hm_numberStringWithNumber:200000 hasDotNumber:false]);
     
     // --- 测试时间转换 ---
     NSLog(@"%@", [NSString hm_timeStringWithTimeValue:59]);
@@ -42,6 +51,7 @@
     NSLog(@"%@", [NSString hm_timeStringWithTimeValue:60 * 60 + 3]);
     NSLog(@"%@", [NSString hm_timeStringWithTimeValue:60 * 60 + 60 * 3 + 13]);
     NSLog(@"%@", [NSString hm_timeStringWithTimeValue:12 * 60 * 60 + 60 * 23 + 53]);
+    NSLog(@"%@", [NSString hm_timeStringWithTimeValue:10 * 60 + 53]);
 }
 
 @end
